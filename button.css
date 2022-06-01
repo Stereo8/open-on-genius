@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Programme";
+  src: url(https://assets.genius.com/fonts/programme_normal.woff2)
+      format("woff2"),
+    url(https://assets.genius.com/fonts/programme_normal.woff?) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+#open-on-genius-button {
+  width: 2em;
+  height: 2em;
+}
+
+#open-on-genius-div {
+  display: flex;
+  justify-content: start;
+  margin-left: 12px;
+  border-radius: 30px;
+  background-color: #ffff64;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+#open-on-genius-div:hover {
+  width: 175px;
+}
+
+#open-on-genius-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6px;
+  color: black;
+  font-size: 0.9em;
+  font-family: "Programme";
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+h1.title > yt-formatted-string {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
