@@ -8,8 +8,8 @@
 }
 
 #open-on-genius-button {
-  width: 3.5em;
-  height: 3.5em;
+  width: 3em;
+  height: 3em;
 }
 
 #open-on-genius-div {
@@ -19,16 +19,16 @@
   margin-right: 8px;
   border-radius: 30px;
   background-color: #ffff64;
-  min-width: 3.5em;
-  max-width: 3.5em;
-  height: 3.5em;
+  min-width: 3em;
+  max-width: 3em;
+  height: 3em;
   overflow: hidden;
   transition: min-width 0.25s;
   cursor: pointer;
 }
 
 #open-on-genius-div:hover {
-  min-width: 165px;
+  min-width: 160px;
 }
 
 #open-on-genius-text {
