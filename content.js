@@ -9,7 +9,6 @@ const intervalID = setInterval(() => {
   let songTitle = titleElement?.innerHTML;
 
   if (songTitle) {
-    titleElement.parentNode.style.display = "flex";
     const div = document.createElement("div");
     div.id = "open-on-genius-div";
 
@@ -38,7 +37,7 @@ const intervalID = setInterval(() => {
       });
     };
 
-    info.insertBefore(div, menuContainer);
+    titleElement.parentNode.appendChild(div);
 
     new MutationObserver(() => {
       songTitle = titleElement?.innerHTML;

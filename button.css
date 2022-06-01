@@ -8,20 +8,20 @@
 }
 
 #open-on-genius-button {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
 }
 
 #open-on-genius-div {
   display: flex;
   justify-content: start;
   gap: 6px;
-  margin-right: 8px;
+  margin-right: 2px;
   border-radius: 30px;
   background-color: #ffff64;
-  min-width: 3em;
-  max-width: 3em;
-  height: 3em;
+  min-width: 2em;
+  max-width: 2em;
+  height: 2em;
   overflow: hidden;
   transition: min-width 0.25s;
   cursor: pointer;
@@ -36,13 +36,15 @@
   justify-content: center;
   align-items: center;
   color: black;
-  font-size: 1.6em;
+  font-size: 0.85em;
   font-family: "Programme";
   overflow: hidden;
   white-space: nowrap;
 }
 
-h1.title > yt-formatted-string {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+h1.title.style-scope.ytd-video-primary-info-renderer {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
 }
