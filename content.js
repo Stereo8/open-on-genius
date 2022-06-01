@@ -49,3 +49,13 @@ const intervalID = setInterval(() => {
     clearInterval(intervalID);
   }
 }, 200);
+
+browser.runtime.onMessage.addListener((message) => {
+  if (message?.shake) {
+    const div = document.querySelector("#open-on-genius-div");
+    div.classList.add("shaking");
+    setTimeout(() => {
+      div.classList.remove("shaking");
+    }, 1000);
+  }
+});

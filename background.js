@@ -16,7 +16,7 @@ const removeThese = [
   "x",
 ];
 
-browser.runtime.onMessage.addListener((message) => {
+browser.runtime.onMessage.addListener((message, sender) => {
   let sanitizedName = null;
 
   if (message?.artistName) {
@@ -28,10 +28,10 @@ browser.runtime.onMessage.addListener((message) => {
     });
   }
 
-  findOnGenius(sanitizedName);
+  findOnGenius(sanitizedName, sender);
 });
 
-function findOnGenius(sanitizedName) {
+function findOnGenius(sanitizedName, sender) {
   console.log(sanitizedName);
   const geniusToken =
     "Bearer PcPAfOlYQSjAYOvfNVHuj4vlHbGxAVzWF8xM8Ifja_fWeDdfjqSG8VwQlNqNJ5mF";
@@ -52,7 +52,7 @@ function findOnGenius(sanitizedName) {
       if (url) {
         browser.tabs.create({ url });
       } else {
-        browser.runtime.sendMessage();
+        browser.tabs.sendMessage(sender.tab.id, { shake: true });
       }
       console.log(json);
     });
