@@ -15,25 +15,26 @@
 #open-on-genius-div {
   display: flex;
   justify-content: start;
+  gap: 6px;
   margin-right: 8px;
   border-radius: 30px;
   background-color: #ffff64;
-  width: 3.5em;
+  min-width: 3.5em;
+  max-width: 3.5em;
   height: 3.5em;
   overflow: hidden;
-  transition: width 0.25s;
+  transition: min-width 0.25s;
   cursor: pointer;
 }
 
 #open-on-genius-div:hover {
-  width: 220px;
+  min-width: 165px;
 }
 
 #open-on-genius-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 6px;
   color: black;
   font-size: 1.6em;
   font-family: "Programme";

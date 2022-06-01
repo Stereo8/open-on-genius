@@ -5,13 +5,19 @@ const removeThese = [
   "official",
   "video",
   "audio",
+  "ft.",
+  "feat.",
+  "featuring",
+  "prod.",
+  "prod",
   "()",
   "[]",
+  "-",
+  "x",
 ];
 
 browser.runtime.onMessage.addListener((message) => {
   let sanitizedName = null;
-  console.log(`title: ${message?.songTitle} artist: ${message?.artistName}`);
 
   if (message?.artistName) {
     sanitizedName = Object.values(message).join(" ");
@@ -26,6 +32,7 @@ browser.runtime.onMessage.addListener((message) => {
 });
 
 function findOnGenius(sanitizedName) {
+  console.log(sanitizedName);
   const geniusToken =
     "Bearer PcPAfOlYQSjAYOvfNVHuj4vlHbGxAVzWF8xM8Ifja_fWeDdfjqSG8VwQlNqNJ5mF";
   const request = new Request(
@@ -41,6 +48,12 @@ function findOnGenius(sanitizedName) {
   fetch(request)
     .then((response) => response.json())
     .then((json) => {
-      browser.tabs.create({ url: json?.response?.hits[0]?.result?.url });
+      url = json?.response?.hits[0]?.result?.url;
+      if (url) {
+        browser.tabs.create({ url });
+      } else {
+        browser.runtime.sendMessage();
+      }
+      console.log(json);
     });
 }
