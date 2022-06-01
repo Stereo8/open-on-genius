@@ -8,24 +8,25 @@
 }
 
 #open-on-genius-button {
-  width: 2em;
-  height: 2em;
+  width: 3.5em;
+  height: 3.5em;
 }
 
 #open-on-genius-div {
   display: flex;
   justify-content: start;
-  margin-left: 12px;
+  margin-right: 8px;
   border-radius: 30px;
   background-color: #ffff64;
-  width: 2em;
-  height: 2em;
+  width: 3.5em;
+  height: 3.5em;
   overflow: hidden;
-  transition: width 0.3s;
+  transition: width 0.25s;
+  cursor: pointer;
 }
 
 #open-on-genius-div:hover {
-  width: 175px;
+  width: 220px;
 }
 
 #open-on-genius-text {
@@ -34,7 +35,7 @@
   align-items: center;
   margin-left: 6px;
   color: black;
-  font-size: 0.9em;
+  font-size: 1.6em;
   font-family: "Programme";
   overflow: hidden;
   white-space: nowrap;

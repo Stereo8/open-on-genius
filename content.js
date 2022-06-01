@@ -2,6 +2,10 @@ let titleElement = null;
 
 const intervalID = setInterval(() => {
   titleElement = document.querySelector("h1.title > yt-formatted-string");
+  const info = document.querySelector(
+    "div#info.style-scope.ytd-video-primary-info-renderer"
+  );
+  const menuContainer = document.querySelector("#menu-container");
   let songTitle = titleElement?.innerHTML;
 
   if (songTitle) {
@@ -33,7 +37,8 @@ const intervalID = setInterval(() => {
         ...(artistName && { artistName }),
       });
     };
-    titleElement.insertAdjacentElement("afterend", div);
+
+    info.insertBefore(div, menuContainer);
 
     new MutationObserver(() => {
       songTitle = titleElement?.innerHTML;
