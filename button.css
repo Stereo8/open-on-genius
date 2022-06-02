@@ -42,6 +42,10 @@
   white-space: nowrap;
 }
 
+#categoryPill {
+  display: none;
+}
+
 h1.title.style-scope.ytd-video-primary-info-renderer {
   display: flex;
   gap: 12px;
